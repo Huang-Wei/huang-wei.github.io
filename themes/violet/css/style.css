@@ -358,7 +358,7 @@ a:hover {
 
 /* =Post
 --------------------------------------*/
-.main-article-title,
+.main-article-title {border-bottom: 1px solid #d3d3d3;}
 .main-article-title a {
     font-size: 40px;
     line-height: 46px;
@@ -420,7 +420,7 @@ a:hover {
 }
 .main-article h2 { font-size: 28px; margin-bottom: 6px; margin-top: 6px; font-weight: bold; border-bottom: 1px solid #eee; }
 .main-article h3 { font-size: 24px; margin-bottom: 6px; margin-top: 6px; }
-.main-article h4 { font-size: 20px; margin-bottom: 20px; margin-top: 36px;}
+.main-article h4 { font-size: 20px; margin-bottom: 20px; margin-top: 36px; padding-bottom: 10px;}
 .main-article h5 { font-size: 18px; margin-bottom: 20px; margin-top: 36px;font-weight: bold; }
 .main-article pre {
     margin: 30px 0px 30px 0px;
