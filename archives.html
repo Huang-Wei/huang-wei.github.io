@@ -7,13 +7,12 @@ isArchive: true
 ---
 <article class="main-article main-article-page">
     <div class="violet-title">
-        <h3 class="violet-title-item">All posts is here.<span>({{ site.posts | size }} posts.)</span></h3>
+        <h3 class="violet-title-item">文章列表 <span>(共{{ site.posts | size }}篇文章.)</span></h3>
     </div>
     <div class="violet-post">
         <div class="main-article-contant">
-
-            {% capture post_year1 %}{{ 'now' | date: '%Y' }}{% endcapture %}
-            <h3>{{ post_year1 }}</h3>
+            <!-- {% capture post_year1 %}{{ 'now' | date: '%Y' }}{% endcapture %}
+            <h3>{{ post_year1 }}</h3> -->
             <ul class="article-year fn-clear">
                 {% for post in site.posts %}
                     {% capture post_year2 %}{{ post.date | date: '%Y' }}{% endcapture %}

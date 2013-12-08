@@ -1,11 +1,3 @@
-/**
- * @name:   violet 样式
- * @author: zhanxin.info@gmail.com
- * @create: 2013.10
- * @desc:   这里是 violet 新的样式
- */
-/* =Reset
---------------------------------------*/
 html {
     color:#000;background:#fff;
     -webkit-text-size-adjust: 100%;
@@ -134,7 +126,7 @@ a:hover {
     width: 100%;
     height: 210;
     background-color: #fff;
-    background-image: url(../images/hdbg03.jpg);
+    background-image: url(../images/hdbg01.jpg);
     background-size: cover;
     background-position: 50% 50%;
     background-repeat: no-repeat;
@@ -224,6 +216,26 @@ a:hover {
     width: 1024px;
     padding: 10px 0;
     margin: 0 auto;
+}
+.violet-post-logo {
+    display: block;
+    float: left;
+    width: 36px;
+    height: 36px;
+    background-image: url(../images/post.png);
+    background-repeat: no-repeat;
+    margin-top: 4px;
+    margin-right: 6px;
+}
+.violet-post1-logo {
+    display: block;
+    float: left;
+    width: 36px;
+    height: 36px;
+    background-image: url(../images/post.png);
+    background-repeat: no-repeat;
+    margin-top: 10px;
+    margin-right: 6px;
 }
 #violet-paging {
     width: 100%;
@@ -364,7 +376,8 @@ a:hover {
     line-height: 46px;
     color: #000;
     text-decoration: none;
-    font-family: "Bebas Neue";
+    /*font-family: "Bebas Neue";*/
+    font-family: Georgia, Palatino, 'Palatino Linotype', Times, 'Times New Roman', "Hiragino Sans GB", "STXihei", "微软雅黑", serif;
 }
 .main-article-title a:hover {
     color: #0088cc;
@@ -416,11 +429,13 @@ a:hover {
     width: 1024px;
     font-size: 40px;
     margin: 0 auto;
-    font-family: "Bebas Neue";
+    /*font-family: "Bebas Neue";*/
+    font-family: Georgia, Palatino, 'Palatino Linotype', Times, 'Times New Roman', "Hiragino Sans GB", "STXihei", "微软雅黑", serif;
+    border-bottom: 3px solid black;
 }
 .main-article h2 { font-size: 28px; margin-bottom: 6px; margin-top: 6px; font-weight: bold; border-bottom: 1px solid #eee; }
-.main-article h3 { font-size: 24px; margin-bottom: 6px; margin-top: 6px; }
-.main-article h4 { font-size: 20px; margin-bottom: 20px; margin-top: 36px; padding-bottom: 10px;}
+.main-article h3 { font-size: 24px; margin-bottom: 6px; margin-top: 6px; padding-bottom: 10px;}
+.main-article h4 { font-size: 20px; margin-bottom: 20px; margin-top: 36px;}
 .main-article h5 { font-size: 18px; margin-bottom: 20px; margin-top: 36px;font-weight: bold; }
 .main-article pre {
     margin: 30px 0px 30px 0px;
@@ -458,9 +473,9 @@ a:hover {
 .main-article em { font-style: italic; }
 .main-article strong { font-weight: bold; }
 .main-article blockquote {
-    padding: 20px 20px 0 20px;
-    margin: 20px 0 24px;
-    border-right: 3px solid #0088cc;
+    padding: 10px 10px 0 10px;
+    margin: 10px 0 10px;
+    border-left: 6px solid #0088cc;
     border-radius: 0 3px 3px 0;
     text-align: right;
     color: #8d8d8d;
