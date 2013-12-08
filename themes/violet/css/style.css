@@ -13,7 +13,7 @@ audio,canvas,video {
     display: inline-block;*display: inline;*zoom: 1;
 }
 body,button,input,select,textarea {
-    font: 14px/1.5 tahoma,arial,"Hiragino Sans GB",\5b8b\4f53;
+    font: 14px/1.5 Georgia, Palatino, 'Palatino Linotype', Times, 'Times New Roman', "Hiragino Sans GB", "STXihei", "微软雅黑", serif,"Hiragino Sans GB",\5b8b\4f53;
 }
 input,select,textarea {
     font-size:100%;
