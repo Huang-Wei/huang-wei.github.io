@@ -30,7 +30,7 @@ $(document).ready(function() {
         _resizeWindow: function() {
             var that = this, topLink = $('#' + that.nodeName);
             if($(window).width() > 1024) {
-                var leftSize = $(window).width() / 2 + 400;
+                var leftSize = $(window).width() / 2 + 520;
                 topLink.css({
                     'right' : '',
                     'left': leftSize + 'px',
