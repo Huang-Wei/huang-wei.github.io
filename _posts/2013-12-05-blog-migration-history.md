@@ -4,7 +4,7 @@ title: Blog继续搬家
 description: 我的blog搬家历史：从blogdriver，到msn space，再到自己买域名，空间搭配wordpress，再到现在基于jekyll托管在github上。
 ---
 
-从今天起，位于lifebackup.cn的blog写作将全迁移至此，之后的某个时间域名也将直接指向此。Bye, wordpress!
+从今天起，位于[lifebackup.cn](http://www.lifebackup.cn)的blog写作将全迁移至此，之后的某个时间域名也将直接指向此。Bye, wordpress!
 
 
 

@@ -40,7 +40,7 @@ follow:
 #作者信息
 author:
   name: superpippo
-  link: http://www.zhanxin.info/contact.html
+  link: http://www.lifebackup.cn
   img: http://tp2.sinaimg.cn/1832671293/180/40020872447/1
 
 #评论信息
@@ -49,5 +49,5 @@ disqus:
   id: hweicdl
 
 duoshuo:
-  config: false
+  config: true
   id: hweicdl
