@@ -26,7 +26,9 @@ description: 我的blog搬家历史：从blogdriver，到msn space，再到自�
 阮一峰说一个人的blog大概会经过[三个阶段](http://www.ruanyifeng.com/blog/2012/08/blogging_with_jekyll.html):
 
 > 第一阶段，刚接触Blog，觉得很新鲜，试着选择一个免费空间来写。
+>
 > 第二阶段，发现免费空间限制太多，就自己购买域名和空间，搭建独立博客。
+>
 > 第三阶段，觉得独立博客的管理太麻烦，最好在保留控制权的前提下，让别人来管，自己只负责写文章。
 
 而我的个人blog也莫出其外，趁还记得，把这些逝去的blog历史写下，权当记念。

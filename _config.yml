@@ -34,6 +34,8 @@ follow:
     url: http://github.com/huang-wei
   - class: fa-weibo
     url: http://weibo.com/hweicdl
+  - class: fa-inbox
+    url: mailto:superpippohw@gmail.com
   - class: fa-rss
     url: /atom.xml
 
