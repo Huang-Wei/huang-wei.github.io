@@ -6,8 +6,6 @@ description: 我的blog搬家历史：从blogdriver，到msn space，再到自�
 
 从今天起，位于[lifebackup.cn](http://www.lifebackup.cn)的blog写作将全迁移至此，之后的某个时间域名也将直接指向此。Bye, wordpress!
 
-
-
 ## Blogdriver and MSN Space
 
 我是大二的时候有一搭没一搭的开始写博客的，那个时代也是各博客提供商争夺用户最激烈的时代。受俱乐部师兄影响，在Blogdriver动力上开了一个博客（确实得用“开”这个词，因为真的真的是毫无技术含量可言）。那个时候的博客无非是提供几个模板，博客写作大致也就是在word里写好，贴进后台编辑器，倒饬倒饬段落样式，齐活，提交。
@@ -18,9 +16,11 @@ description: 我的blog搬家历史：从blogdriver，到msn space，再到自�
 
 ## Wordpress
 
-
+TODO...
 
 ## Jekyll hosted on Github
+
+TODO...
 
 ## 后记
 阮一峰说一个人的blog大概会经过[三个阶段](http://www.ruanyifeng.com/blog/2012/08/blogging_with_jekyll.html):
