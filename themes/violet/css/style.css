@@ -144,6 +144,7 @@ a:hover {
     font-family: 'Spirax', cursive;
     font-size: 52px;
     color: #fefefe;
+    background-color: transparent;
     -webkit-transition: color .4s ease-in-out;
     -moz-transition: color .4s ease-in-out;
     -ms-transition: color .4s ease-in-out;
