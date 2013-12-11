@@ -66,11 +66,7 @@ if [ true command ]; then
 
 ## Tip 7. 将执行结果赋予变量
 
-有两种方式：
-```
-var1=`command` 或者 var1=$(command)
-```
-Google的[shell code](http://google-styleguide.googlecode.com/svn/trunk/shell.xml)规范推荐后者。
+有两种方式：`` var1=`command` `` 或者 `var1=$(command)`。Google的[shell code](http://google-styleguide.googlecode.com/svn/trunk/shell.xml)规范推荐后者。
 
 ## Tip 8. 变量替换
 
