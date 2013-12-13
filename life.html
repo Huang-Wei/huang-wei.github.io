@@ -1,0 +1,20 @@
+---
+layout: default
+title: 山与远方
+---
+
+{% for rpost in site.categories.life %}
+<article class="main-article">
+    <div class="violet-post">
+        <h3 class="main-article-title">
+            <span class="violet-post-logo"></span>
+            <a href="{{ rpost.url }}" title="{{ rpost.title }}" rel="bookmark">{{ rpost.title }}</a>
+        </h3>
+        <p class="main-article-meta">发表于<time pubdate="{{ rpost.date | date_to_utc | date: '%Y-%m-%d' }}">{{ rpost.date | date_to_utc | date: "%Y-%m-%d %H:%M" }}</time></p>
+        <div class="main-article-contant">
+            <p>{{ rpost.description }}</p>
+            <p class="main-article-more"><a href="{{ rpost.url }}" title="Read More" rel="nofollow">Read More</a></p>
+        </div>
+    </div>
+</article>
+{% endfor %}
