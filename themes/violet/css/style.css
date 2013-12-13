@@ -188,9 +188,9 @@ a:hover {
     line-height: 32px;
     padding: 0 20px;
     border-radius: 3px 3px;
-    background: rgba(0, 0, 0, 0.6);
-    color: #fff;
+    background: rgba(255, 255, 255, 0.6);
     font-size: 14px;
+    color: black;
     -webkit-transition: background .4s ease-in-out;
     -moz-transition: background .4s ease-in-out;
     -ms-transition: background .4s ease-in-out;
@@ -200,6 +200,8 @@ a:hover {
 .nav-item a:hover,
 .nav-item-active a {
     background: rgba(0,0,0,0.8);
+
+    color: #fff;
     text-decoration: none;
 }
 
@@ -495,7 +497,7 @@ a:hover {
     padding: 4px 4px;
     border: 1px solid #a8a8a8;
     display: block;
-    opacity: 0.8;
+    /*opacity: 0.8;*/
 }
 .main-article img:hover {
     opacity: 1;

@@ -17,6 +17,12 @@ nav:
     url: /index.html
   - text: 文章归档
     url: /archives.html
+  - text: 01呓语
+    url: /programming.html
+  - text: 山与远方
+    url: /life.html
+  - text: 白加黑
+    url: /football.html
 
 #theme config
 themes: /themes/violet
