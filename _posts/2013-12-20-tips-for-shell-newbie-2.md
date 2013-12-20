@@ -222,3 +222,5 @@ EOF
 bash another_script.sh
 ```
 这样就不用一句句`echo`了。
+
+## [Go to Tip 1 - Tip 10]({{site.url}}/programming/2013/12/06/tips-for-shell-newbie-1.html)

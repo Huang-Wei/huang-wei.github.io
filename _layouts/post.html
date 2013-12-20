@@ -11,7 +11,7 @@ comment: true
         </h3>
     </div>
     <div class="violet-post">
-        <p class="main-article-meta"><time pubdate="{{ rpost.date | date_to_utc | date: '%Y-%m-%d' }}">{{ page.date | date_to_utc | date: "%Y-%m-%d" }}</time></p>
+        <p class="main-article-meta">发表于<time pubdate="{{ rpost.date | date_to_utc | date: '%Y-%m-%d' }}">{{ page.date | date_to_utc | date: "%Y-%m-%d" }}</time></p>
         <div class="main-article-contant">
             {{ content }}
         </div>
