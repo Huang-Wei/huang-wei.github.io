@@ -3,6 +3,7 @@ layout: post
 title: Tips for shell newbie (2)
 description: 记录在写shell脚本时遇到的坑与技巧。
 keyword: linux, bash, shell
+categories: programming
 ---
 
 ## <a name="tip11"></a>Tip 11. 函数的返回值
