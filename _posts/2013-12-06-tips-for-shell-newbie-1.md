@@ -18,7 +18,7 @@ PS2：sh是一种POSIX规范，而众多的shell类型是它的实现。linux系
 
 `a = 'test'`，这条语句是错误的。因为在shell里赋值语句=的两边是不能有空格的，`a=test`才是正确写法。这个错误几乎是初学者必犯的错误了。。。
 
-但是在判断语句中[]两侧则必须留空格：`if [a == 'test']`是错误的；`if [ a == 'test' ]`是正确的。
+但是在判断语句中`[]`两侧则必须留空格：`if [a == 'test']`是错误的；`if [ a == 'test' ]`是正确的。
 
 ## Tip 3. 各种预留的$变量
 
@@ -59,6 +59,7 @@ if [ ! false command ]; then
   dosomthing
 ```
 可以用`false command || dosomething`替代。同理：
+
 ```
 if [ true command ]; then
   dosomthing
