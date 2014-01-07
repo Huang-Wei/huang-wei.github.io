@@ -461,7 +461,8 @@ a:hover {
     border-radius: 3px 3px;
     line-height: inherit;
     vertical-align: baseline;
-    padding: 2px 2px;
+    padding: 0 2px 0 2px;
+    margin: 0 2px 0 2px;
 }
 .main-article pre code {
     border: none;
