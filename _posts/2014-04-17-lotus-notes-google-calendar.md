@@ -12,21 +12,21 @@ categories: programming
 2. 打开`HelpFile.html`，仔细阅读`Installation`部分。
 3. 如果至`#13`步时出现如下错误：
 
-```
-google no application name
-Error: invalid_client
+	```
+	google no application name
+	Error: invalid_client
 
-Request Details
-cookie_policy_enforce=false
-scope=https://www.googleapis.com/auth/calendar
-response_type=code
-access_type=offline
-redirect_uri=http://localhost:35406/Callback
-display=page
-client_id=1060145331129.apps.googleusercontent.com
-```
+	Request Details
+	cookie_policy_enforce=false
+	scope=https://www.googleapis.com/auth/calendar
+	response_type=code
+	access_type=offline
+	redirect_uri=http://localhost:35406/Callback
+	display=page
+	client_id=1060145331129.apps.googleusercontent.com
+	```
 
-参考[stackoverflow](http://stackoverflow.com/questions/18677244/error-invalid-client-no-application-name)来解决。
+可以参考[stackoverflow](http://stackoverflow.com/questions/18677244/error-invalid-client-no-application-name)来解决。
 
 ## 运行
 
