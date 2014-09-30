@@ -122,4 +122,6 @@ ssh -D 7000 username@vm_outside_greatwall
 
 然后在chrome中的proxy settings就可以指定localhost:7000作为socks server以访问各类被“墙”的网站。不过基本没人在原生的proxy settings里配，很多插件很方便地配置和切换，`SwichySharp`就是其中之一。另外，`proxychains`可以在命令行下控制每一条命令，应用程序都由socks server连接。
 
-## 3. scp
+## 3. SSH远程调用
+
+## 4. SCP
