@@ -10,34 +10,39 @@ categories: programming
 
 ## 1. 远程登录
 
-这可能就是我上学时以为`ssh`功能的全部了，也是为大家熟知的最基本功能。
+这可能就是我上学时以为`ssh`功能的全部了，也是最基本功能。
 
-* `ssh username@host`
+### 1.1. ssh username@host
+
 这是最常用的方式，输入密码就可以远程访问了，但仅限于远程ssh服务器允许密码访问的时候。
 
-* `ssh [-i private_key] username@host`
+### 1.2. ssh [-i private_key] username@host
+
 这条命令用于在远程ssh服务器不允许密码访问（只允许私钥）时，具体做法是这样的：
-    * 在本机用`ssh-keygen`生成一对openssh协议的钥匙对：默认的加密算法是`rsa`，存放位置是`~/.ssh/id_rsa`和`~/.ssh/id_rsa.pub`。
-    * 将公钥的内容`~/.ssh/id_rsa.pub`粘贴到远程服务器上的`~/.ssh/authorized_keys`（这个默认位置也可以通过`/etc/sshd/config`来修改）。当然，`ssh-copy-id`（需要额外安装这个包）能帮你做同样的事。
-    * 如果你的私钥是存放在默认位置和默认命名（`~/.ssh/id_rsa`），那么直接`ssh username@host`你就可以访问远程主机了。否则需要用`-i`显式指定。
-    * **注意1**：如果你是在windows下，千万不要把第三方工具（例如putty或securecrt）的key和标准openssh协议的key相混淆。以putty为例，你需要将openssh的私钥（`id_rsa`）用它自带的`puttygen`工具转换一下，生成一个`.ppk`文件，然后在连接的session中指定这个`.ppk`文件。
-    * **注意2**：在远程服务器上的`.ssh`文件夹权限最好为`700(rwx)`，权限过于开放是无法使用password-less方式的。
 
-* `ssh host`
+* 在本机用`ssh-keygen`生成一对openssh协议的钥匙对：默认的加密算法是`rsa`，存放位置是`~/.ssh/id_rsa`和`~/.ssh/id_rsa.pub`。
+* 将公钥的内容`~/.ssh/id_rsa.pub`粘贴到远程服务器上的`~/.ssh/authorized_keys`（这个默认位置也可以通过`/etc/sshd/config`来修改）。当然，`ssh-copy-id`（需要额外安装这个包）能帮你做同样的事。
+* 如果你的私钥是存放在默认位置和默认命名（`~/.ssh/id_rsa`），那么直接`ssh username@host`你就可以访问远程主机了。否则需要用`-i`显式指定。
+* **注意1**：如果你是在windows下，千万不要把第三方工具（例如putty或securecrt）的key和标准openssh协议的key相混淆。以putty为例，你需要将openssh的私钥（`id_rsa`）用它自带的`puttygen`工具转换一下，生成一个`.ppk`文件，然后在连接的session中指定这个`.ppk`文件。
+* **注意2**：在远程服务器上的`.ssh`文件夹权限最好为`700(rwx)`，权限过于开放是无法使用password-less方式的。
+
+### 1.3. ssh host
+
 这条命令有两层意思：
-    * 如果你的本地有`~/.ssh/config`这个文件，那么它会读取里面的内容，例如你可以写入以下内容：那么`ssh host`就相当于你以以下这些配置连接到了`9.9.9.9`
-        
-        ```
-    Host host
-        HostName 9.9.9.9
-        IdentityFile ~/.ssh/id_rsa
-        User hweicdl
-        ServerAliveInterval 15
-        Port 12345
-        ForwardAgent yes
-        ```
 
-    * 另一层意思就是这条命令省略了用户名：它会以当前的登录名访问远程服务器，相当于`ssh $(whoami)@host`
+* 如果你的本地有`~/.ssh/config`这个文件，那么它会读取里面的内容，例如你可以写入以下内容：那么`ssh host`就相当于你以以下这些配置连接到了`9.9.9.9`
+    
+```
+Host host
+    HostName 9.9.9.9
+    IdentityFile ~/.ssh/id_rsa
+    User hweicdl
+    ServerAliveInterval 15
+    Port 12345
+    ForwardAgent yes
+```
+
+* 另一层意思就是这条命令省略了用户名：它会以当前的登录名访问远程服务器，相当于`ssh $(whoami)@host`
 
 ## 2. 端口转发
 
@@ -61,10 +66,10 @@ ssh -L 8000:vm1:80 username@jumpbox
 
 * **注意1:** 这条命令成功的前提是vm1的80端口是能从jumpbox直接访问的。如果vm1的80端口是在防火墙后面的，那就要做两层转发：`本地:8000 -> jumpbox:[some_port]` and `jumpbox:[some_port] -> vm1:80`。即：
 
-```
-ssh -L 8000:localhost:7777 username@jumpbox # 此命令运行在本地
-ssh -L 7777:localhost:80 username@vm1 # 此命令运行在jumpbox
-```
+    ```
+    ssh -L 8000:localhost:7777 username@jumpbox # 此命令运行在本地
+    ssh -L 7777:localhost:80 username@vm1 # 此命令运行在jumpbox
+    ```
 
 * **注意2:** 如果想在后台长时间地维持这个通道，可以加入以下参数：`ssh -qTfnN -L 8000:vm1:80 username@jumpbox`。
 
@@ -80,8 +85,8 @@ ssh -R [ssh_server_port]:[remote_host]:[remote_host_port] username@ssh_server
 
 与本地转发有几点不同：
 
-1. 这里的`remote_host`是本地机器可以访问的某个主机。而本地端口转发中，`remote_host`是`ssh_server`能访问的主机。
-2. 还是以openstack集群为例，大部分情况下，jumpbox只是和本机在一个subnet，是无法反向地访问本地网络及公网的，那么就无法只靠一条ssh命令来让vm1访问到本地网络及公网，必须做两层反向代理：`jumpbox:[some_port2] <- vm1:[some_port3]` and `[remote_host]:[some_port1] <- jumpbox:[some_port2]`，即：
+* 这里的`remote_host`是本地机器可以访问的某个主机。而本地端口转发中，`remote_host`是`ssh_server`能访问的主机。
+* 还是以openstack集群为例，大部分情况下，jumpbox只是和本机在一个subnet，是无法反向地访问本地网络及公网的，那么就无法只靠一条ssh命令来让vm1访问到本地网络及公网，必须做两层反向代理：`jumpbox:[some_port2] <- vm1:[some_port3]` and `[remote_host]:[some_port1] <- jumpbox:[some_port2]`，即：
 
     ```
     ssh -R 8888:localhost:7777 username@vm1 # 此命令运行在jumpbox上
@@ -92,15 +97,15 @@ ssh -R [ssh_server_port]:[remote_host]:[remote_host_port] username@ssh_server
 
 我经常把反向代理用在下列的场景中：
 
-1. 公司内网防火墙后的机器，一般是不能访问公网的。那么起一个反向代理，就可以让它们访问公网。
-2. 如果访问的外网是github，端口是22，那么在公司内网的机器就可以直接操作github上的项目。
+* 公司内网防火墙后的机器，一般是不能访问公网的。那么起一个反向代理，就可以让它们访问公网。
+* 如果访问的外网是github，端口是22，那么在公司内网的机器就可以直接操作github上的项目。
 
     ```
     ssh -R 6666:github.com:22 username@intranet_vm # 运行在你可以访问公用的pc
     git clone ssh://git@localhost:6666/<github_project> # 运行在intranet_vm
     ```
 
-3. 一般公司都有不关机的台式机，基本是不关机的。那么在其上起一个反向代理到某个你的云主机（softlayer，阿里云什么的，有公网ip并且开了ssh权限就行），然后在家里登上你的云主机，就可以访问公司的内网了。
+* 一般公司都有不关机的台式机，基本是不关机的。那么在其上起一个反向代理到某个你的云主机（softlayer，阿里云什么的，有公网ip并且开了ssh权限就行），然后在家里登上你的云主机，就可以访问公司的内网了。
 
 ### 2.3. SSH -D
 
@@ -125,3 +130,5 @@ ssh -D 7000 username@vm_outside_greatwall
 ## 3. SSH远程调用
 
 ## 4. SCP
+
+## 5. Misc
