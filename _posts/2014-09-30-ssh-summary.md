@@ -6,6 +6,8 @@ keyword: ssh, port, forwarding, tunnel
 categories: programming
 ---
 
+![](/images/201409/ssh.jpg)
+
 上大学的时候，曾经看到有小伙伴买过这本书（当时是第一版），当时心想：不是吧，`SSH`还能出一本书呢，不就是一命令吗？是的，虽然只是一个命令，但能用好它也绝非易事。这篇文章将从最实用的角度出发，写一些`ssh`的技巧。
 
 ## 1. 远程登录
