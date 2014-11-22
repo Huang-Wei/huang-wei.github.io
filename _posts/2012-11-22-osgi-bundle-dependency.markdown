@@ -13,30 +13,25 @@ tags:
 
 ## 1. OSGi Terms
 
-* OSGi, Equinox and Eclipse  
+* **OSGi, Equinox and Eclipse**  
 从历史上来说，OSGi和Eclipse一开始都是独立发展的。OSGi首先是一套规范，核心在于它模块化，松耦合的理念，而Eclipse致力于构建一套基础的工具平台。         
 在2003年，基于Eclipse出现了Eqinox项目：其最初的目的是解决当时Eclipse的一些运行时问题，而OSGi以清晰的组件模型，强大的执行规范为选为最可能的实现参考。         
 之后就是两个组织间理念的碰撞及融合，Equinox借鉴了很多OSGi的思想，反过来也影响了OSGi的发展。OSGi的R4版本就是二者相互影响后的一个结果。至今，Equinox依然是OSGi规范的参考实现(Reference Implementation)。         
-而在Eclipse这边，其运行时在3.1后就被替换成Equinox——完全基于OSGi的运行时实现。 
-   
-* Plugin and Bundle        
+而在Eclipse这边，其运行时在3.1后就被替换成Equinox——完全基于OSGi的运行时实现。
+* **Plugin and Bundle**     
 二者在概念上来说，其实都是「模块」的同义词。只不过从历史上来说，OSGi喜欢用Bundle这个词，Eclipse则更喜欢用Plugin这个词。         
-而Plugin作为一种特殊的Bundle，特殊在其有一个特殊的描述文件：plugin.xml。 
-   
-* plugin.xml and MANIFEST.MF        
+而Plugin作为一种特殊的Bundle，特殊在其有一个特殊的描述文件：plugin.xml。
+* **plugin.xml and MANIFEST.MF**        
 在Eclipse的3.0或之前版本，是只有plugin.xml的。因为如前面说到的，从3.1开始其运行时才完全开始采用Equinox。         
-而在Eclipse完全基于OSGi后，二者的差别就比较小了。              
-
-* MANIFEST.MF是作为最核心的组件描述符存在的：Bundle Version, Name, Dependency等等都在其中定义 
-       
-* plugin.xml是作为MANIFEST.MF的一个补充。除了OSGi的标准Service模型，Equinox还有一套自己的机制：Equinox Extension Registry。也就是我们常用的Eclipse扩展点机制，在功能上它是对OSGi的一个很好补充。 
+而在Eclipse完全基于OSGi后，二者的差别就比较小了。
+  * MANIFEST.MF是作为最核心的组件描述符存在的：Bundle Version, Name, Dependency等等都在其中定义
+  * plugin.xml是作为MANIFEST.MF的一个补充。除了OSGi的标准Service模型，Equinox还有一套自己的机制：Equinox Extension Registry。也就是我们常用的Eclipse扩展点机制，在功能上它是对OSGi的一个很好补充。 
 
 ## 2. Bundle Dependencies
 
 `Import-Package`和`Require-Bundle`是说明Bundle间依赖的两个关键字，二者以不同粒度指定了Bundle间的依赖关系，它们都在MANIFEST.MF中定义。
 
 * `Import-Package`：package是细粒度的模块划分。例如A bundle将_x.y.z.common_和_x.y.z.core_利用Export-Package关键字暴露出来，其他的Bundle就可以利用Import-Package引用common或core。
-
 * `Require-Bundle`：相对于bundle是粗粒度的模块划分。例如A bundle有_x.y.z.common_，_x.y.z.core_和_x.y.z.internal_三个package，并利用Export-Package关键字将common和core包暴露出来。那么当B bundle指定_Require-Bundle:A_时，B就可以访问common和core包，但不包括internal包，因为A并未将其Export出来。
 
 一般来说，`Import-Package`的控制粒度更精确，经常被那些一开始就使用OSGi的开发者所使用，这也对整个系统的设计上提出了更高要求。而`Require-Bundle`似乎更经常被那些一开始就使用Eclipse的开发者所使用，粒度会更粗。虽然在实际上开发过程被大量使用，但按照OSGi学院派的说法是不被推荐使用的。（这个问题就见仁见智了，暂不在本文的讨论范围内）
@@ -160,15 +155,10 @@ re-exporting (visibility:=reexport) 能将其require的bundle中export的包重�
 这篇文章的初衷是解决在工作中遇到的OSGi环境下包冲突的问题，并利用这篇blog将它的root cause及相关概念整理一下。以下是调试这类问题的一些小技巧：
 
 * 在Eclipse环境下，在eclipse.ini中加入`-console`来打开OSGi的控制台 
-   
-* 在OSGi控制台下，输入help能看到所有的命令说明。除了常用的`ss`，`start`，`stop`外，个人觉得非常重要的还有`diag`，`packages`，`header`等命令 
-   
-* 快捷键Ctrl+Shift+A快速定位到某个bundle和package 
-   
+* 在OSGi控制台下，输入help能看到所有的命令说明。除了常用的`ss`，`start`，`stop`外，个人觉得非常重要的还有`diag`，`packages`，`header`等命令
+* 快捷键Ctrl+Shift+A快速定位到某个bundle和package
 * Plug-in Dependencies视图 
-   
 * 修改OSGi源代码打印出更详细的出错信息，详见这篇[文章](http://www.talendforge.org/wiki/doku.php?id=dev:troubleshooting_rcp_application)
- 
 
 ## 8. References
 

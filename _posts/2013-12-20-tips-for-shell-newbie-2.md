@@ -8,27 +8,27 @@ categories: programming
 
 ## <a name="tip11"></a>Tip 11. 函数的返回值
 
-- 和大多数语言一样，返回值用`return`（如果不指定则返回最后一条语句的返回值）。但和大多数语言不一样，shell中返回值**只能为整数**。
+* 和大多数语言一样，返回值用`return`（如果不指定则返回最后一条语句的返回值）。但和大多数语言不一样，shell中返回值**只能为整数**。
+  
+  ```bash
+  fun1() {
+    return 100 # 正确
+  }
 
-```bash
-fun1() {
-  return 100 # 正确
-}
-
-fun2() {
-  return "fun2" # 错误
-}
-```
+  fun2() {
+    return "fun2" # 错误
+  }
+  ```
 
 - 调用时接收不能用`foo=fun1`（实际上这不是调用函数`fun1`，而是将字符串fun1赋给foo）。得先调用`fun1`，再用`$?`得到返回值。
 
-```bash
-foo=fun1 # 错误
-echo $foo # 输出fun1
-
-fun1
-echo $? # 输出100
-```
+  ```bash
+  foo=fun1 # 错误
+  echo $foo # 输出fun1
+  
+  fun1
+  echo $? # 输出100
+  ```
 
 ## Tip 12. 命令的返回值
 一般的linux命令，都可以在shell中直接使用，我们也经常利用这些命令（包括[Tip 11](#tip11)中的自定义函数）的标准输出（管道1）来当作"hacked"返回值。
@@ -101,13 +101,13 @@ yesnyes
 
 - 使用文件重定向(准备一个文件事先写入分行的输入)
 
-```bash
-cat input
-yes
-yes
-
-./read.sh < input
-```
+  ```bash
+  cat input
+  yes
+  yes
+  
+  ./read.sh < input
+  ```
 
 - `echo -e "yes\nyes" | ./read.sh`
 
@@ -118,13 +118,13 @@ bash中的变量分为全局变量和本地变量。
 - `var1=value`此类声明的变量为全局变量。若脚本读到（按执行顺序）的变量沿未被赋值，则该变量为空。另外，在shell中也可以引用任何预定义的变量，用`printenv`可以查看。
 - `local var1=value`此类声明的变量为局部变量，且只能用在函数中。
 
-PS：变量无需声明就可以使用，但通过`declare option var`声明可以限制变量的类型。`option` could be:
-
-- -r read only variable
-- -i integer variable
-- -a array variable
-- -f for funtions
-- -x declares and export to subsequent commands via the environment
+  PS：变量无需声明就可以使用，但通过`declare option var`声明可以限制变量的类型。`option` could be:
+  
+  - -r read only variable
+  - -i integer variable
+  - -a array variable
+  - -f for funtions
+  - -x declares and export to subsequent commands via the environment
 
 ## Tip 15. 数组
 

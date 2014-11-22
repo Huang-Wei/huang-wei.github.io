@@ -443,7 +443,7 @@ a:hover {
 .main-article h4 { font-size: 20px; margin-bottom: 20px; margin-top: 36px;}
 .main-article h5 { font-size: 18px; margin-bottom: 20px; margin-top: 36px;font-weight: bold; }
 .main-article pre {
-    margin: 10px 0px 10px 0px;
+    margin: 0px 0px 20px 0px;
     padding: 6px 10px;
     background-color: #F4F4F6;
     clear: both;
@@ -472,7 +472,7 @@ a:hover {
     list-style-type: disc;
     font-size: 16px;
     line-height: 1.6;
-    margin-bottom: 24px;
+    /*margin-bottom: 24px;*/
     padding-left: 20px;
 }
 .main-article ol {
@@ -487,7 +487,7 @@ a:hover {
     border-radius: 0 3px 3px 0;
     text-align: left;
     color: #8d8d8d;
-    font-style: italic;
+    /*font-style: italic;*/
 }
 .main-article blockquote p {
     color: #8d8d8d;
@@ -583,3 +583,20 @@ a.toTop:hover {
     vertical-align: top;
 }
 
+.main-article-contant p + pre,
+.main-article-contant p + ul,
+.main-article ul + pre {
+    margin: -15px 0px 20px 0px;
+}
+
+ul > li, ol > li {
+    padding-bottom: 6px;
+}
+
+.main-article ul > li > ul {
+    list-style-type: circle;
+}
+
+.main-article ul > li > ul > li {
+    padding-bottom: 0;
+}

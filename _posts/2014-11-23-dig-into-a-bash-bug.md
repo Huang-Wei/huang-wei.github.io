@@ -5,6 +5,8 @@ keyword: ssh, bash, loop
 categories: programming
 ---
 
+## 两个例子
+
 假设文件`vms`里存着两个vm的名称：
 
 ```
@@ -74,15 +76,15 @@ vm2
 
 知道了原因，怎么来改这个程序就很容易了，有三种方法：
 
-1. 将`while`中的标准输入重定向至`/dev/null`  
+1. 将`while`中的标准输入重定向至`/dev/null`:  
     `0</dev/null ssh root@${vm} "sleep 2"`
-1. 用`/dev/null`来作为标准输入  
+1. 用`/dev/null`来作为标准输入:  
     `ssh root@${vm} "sleep 2" < /dev/null`
-1. 使用`ssh -n`  
+1. 使用`ssh -n`:  
     `ssh -n root@${vm} "sleep 2"`
     > -n Redirects stdin from /dev/null (actually, prevents reading from stdin).
 
-Refs:
+## Refs:
 
 * http://www.unix.com/shell-programming-and-scripting/38060-ssh-break-while-loop.html
 * http://novosial.org/shell/while-ssh/index.html

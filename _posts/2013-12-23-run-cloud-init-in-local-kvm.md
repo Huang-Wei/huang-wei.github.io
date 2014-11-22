@@ -30,16 +30,15 @@ KVM acceleration can be used
 - 对于12.10之后的版本，只需要 `sudo apt-get install cloud-utils`。
 - 由于`cloud-localds`是在ubuntu 12.10之后才加入的，对于12.04，除了上面的命令，还需要手工安装`cloud-localds`：
 
-```
+  ```
 bzr branch lp:cloud-utils
 sudo cp cloud-utils/bin/cloud-localds /usr/local/bin
 sudo apt-get --assume-yes install genisoimage qemu-utils coreutils
-```
+  ```
 
 ## 下载ubuntu cloud image
 
-我们选用13.10的[cloud image](http://cloud-images.ubuntu.com/releases/13.10/release/)下载：
-
+我们选用13.10的[cloud image](http://cloud-images.ubuntu.com/releases/13.10/release/)下载：  
 `wget http://cloud-images.ubuntu.com/releases/13.10/release/ubuntu-13.10-server-cloudimg-amd64-disk1.img`
 
 下载回来的是200多M的压缩qcow2格式，当然可以直接来用，只不过在启动的时候会做解压，影响启动速度，在这儿我们把它解压：`qemu-img convert -O qcow2 ubuntu-13.10-server-cloudimg-amd64-disk1.img my_vm.img`

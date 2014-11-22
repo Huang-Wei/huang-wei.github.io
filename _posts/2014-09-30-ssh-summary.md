@@ -34,15 +34,15 @@ categories: programming
 
 * 如果你的本地有`~/.ssh/config`这个文件，那么它会读取里面的内容，例如你可以写入以下内容：那么`ssh host`就相当于你以以下这些配置连接到了`9.9.9.9`
     
-```
-Host host
+    ```
+  Host host
     HostName 9.9.9.9
     IdentityFile ~/.ssh/id_rsa
     User hweicdl
     ServerAliveInterval 15
     Port 12345
     ForwardAgent yes
-```
+    ```
 
 * 另一层意思就是这条命令省略了用户名：它会以当前的登录名访问远程服务器，相当于`ssh $(whoami)@host`
 
@@ -69,8 +69,8 @@ ssh -L 8000:vm1:80 username@jumpbox
 * **注意1:** 这条命令成功的前提是vm1的80端口是能从jumpbox直接访问的。如果vm1的80端口是在防火墙后面的，那就要做两层转发：`本地:8000 -> jumpbox:[some_port]` and `jumpbox:[some_port] -> vm1:80`。即：
 
     ```
-    ssh -L 8000:localhost:7777 username@jumpbox # 此命令运行在本地
-    ssh -L 7777:localhost:80 username@vm1 # 此命令运行在jumpbox
+ssh -L 8000:localhost:7777 username@jumpbox # 此命令运行在本地
+ssh -L 7777:localhost:80 username@vm1 # 此命令运行在jumpbox
     ```
 
 * **注意2:** 如果想在后台长时间地维持这个通道，可以加入以下参数：`ssh -qTfnN -L 8000:vm1:80 username@jumpbox`。
@@ -91,8 +91,8 @@ ssh -R [ssh_server_port]:[remote_host]:[remote_host_port] username@ssh_server
 * 还是以openstack集群为例，大部分情况下，jumpbox只是和本机在一个subnet，是无法反向地访问本地网络及公网的，那么就无法只靠一条ssh命令来让vm1访问到本地网络及公网，必须做两层反向代理：`jumpbox:[some_port2] <- vm1:[some_port3]` and `[remote_host]:[some_port1] <- jumpbox:[some_port2]`，即：
 
     ```
-    ssh -R 8888:localhost:7777 username@vm1 # 此命令运行在jumpbox上
-    ssh -R 7777:remote_host:9999 username@jumpbox # 此命令运行在本地
+ssh -R 8888:localhost:7777 username@vm1 # 此命令运行在jumpbox上
+ssh -R 7777:remote_host:9999 username@jumpbox # 此命令运行在本地
     ```
 
   这样在vm1上就可以访问其8888端口来访问remote_host的9999端口。
@@ -103,8 +103,8 @@ ssh -R [ssh_server_port]:[remote_host]:[remote_host_port] username@ssh_server
 * 如果访问的外网是github，端口是22，那么在公司内网的机器就可以直接操作github上的项目。
 
     ```
-    ssh -R 6666:github.com:22 username@intranet_vm # 运行在你可以访问公用的pc
-    git clone ssh://git@localhost:6666/<github_project> # 运行在intranet_vm
+ssh -R 6666:github.com:22 username@intranet_vm # 运行在你可以访问公用的pc
+git clone ssh://git@localhost:6666/<github_project> # 运行在intranet_vm
     ```
 
 * 一般公司都有不关机的台式机，基本是不关机的。那么在其上起一个反向代理到某个你的云主机（softlayer，阿里云什么的，有公网ip并且开了ssh权限就行），然后在家里登上你的云主机，就可以访问公司的内网了。
