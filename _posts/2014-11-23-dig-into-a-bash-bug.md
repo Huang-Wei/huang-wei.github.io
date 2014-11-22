@@ -1,7 +1,6 @@
 ---
 layout: post
 title: 从一个bash "bug"说起
-description: 小命令里有大世界，记录SSH使用的各种技巧。
 keyword: ssh, bash, loop
 categories: programming
 ---
@@ -14,6 +13,7 @@ vm2
 ```
 
 那么你期待下面的脚本`while_loop.sh`会输出什么？
+
 ```bash
 #!/bin/bash
 # while_loop.sh
@@ -74,12 +74,12 @@ vm2
 
 知道了原因，怎么来改这个程序就很容易了，有三种方法：
 
-1. 将`while`中的标准输入重定向至`/dev/null`
+1. 将`while`中的标准输入重定向至`/dev/null`  
     `0</dev/null ssh root@${vm} "sleep 2"`
-1. 用`/dev/null`来作为标准输入
+1. 用`/dev/null`来作为标准输入  
     `ssh root@${vm} "sleep 2" < /dev/null`
-1. 使用`ssh -n`
-    ssh -n root@${vm} "sleep 2"
+1. 使用`ssh -n`  
+    `ssh -n root@${vm} "sleep 2"`
     > -n Redirects stdin from /dev/null (actually, prevents reading from stdin).
 
 Refs:
