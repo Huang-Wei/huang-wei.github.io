@@ -48,10 +48,11 @@ follow:
     url: /atom.xml
 
 #作者信息
-author:
-  name: superpippo
-  link: http://www.lifebackup.cn
-  img: http://tp2.sinaimg.cn/1832671293/180/40020872447/1
+authors:
+  superpippo:
+    display: Superpippo
+  lisa:
+    display: Lisa
 
 #评论信息
 disqus:
