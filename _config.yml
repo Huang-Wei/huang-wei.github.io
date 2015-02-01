@@ -51,8 +51,10 @@ follow:
 authors:
   superpippo:
     display: Superpippo
+    img: http://tp4.sinaimg.cn/2120241507/180/40025374134/1
   lisa:
     display: Lisa
+    img: http://tp4.sinaimg.cn/1864686623/180/5681284451/0
 
 #评论信息
 disqus:

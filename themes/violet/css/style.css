@@ -600,3 +600,13 @@ ul > li, ol > li {
 .main-article ul > li > ul > li {
     padding-bottom: 0;
 }
+
+img.img-author {
+    margin: 0;
+    padding: 0 6px 0 0;
+    background: none;
+    border: none;
+    height: 28px;
+    float: left;
+    border-radius: 50%;
+}
