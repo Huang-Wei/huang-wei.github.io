@@ -12,4 +12,4 @@ tags:
 - life
 ---
 
-![superpippo](http://www.lifebackup.cn/wp-content/uploads/images/superpippo_14D07/superpippo.jpg)
+![](/images/200504/superpippo.jpg)

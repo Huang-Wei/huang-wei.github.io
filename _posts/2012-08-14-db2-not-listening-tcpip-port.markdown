@@ -19,7 +19,7 @@ tags:
 
 ## 1. 查看当前实例配置信息中的SVCENAME值
 
-![](http://www.lifebackup.cn/wp-content/uploads/2012/08/image.png)
+![](/images/201208/image.png)
 
 可以看到TCP service name为db2c_db2inst5
 
@@ -33,9 +33,9 @@ netstat -a | grep "db2c_db2inst5"
 
 PS：一个正常监听的端口在netstat -a及/etc/services中的定义应该是这样的：
 
-![](http://www.lifebackup.cn/wp-content/uploads/2012/08/image1.png)
+![](/images/201208/image1.png)
 
-![](http://www.lifebackup.cn/wp-content/uploads/2012/08/image2.png)
+![](/images/201208/image2.png)
 
 ## 3. 查看db2set
 

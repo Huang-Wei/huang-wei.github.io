@@ -43,7 +43,7 @@ if (stream != null) {
 
 而生成的这个test.zip有1KB的大小，用Notepad++打开显示如下：
 
-![image](http://www.lifebackup.cn/wp-content/uploads/2012/12/image.png)
+![image](/images/201212/image.png)
 
 [Google](http://www.digitalpreservation.gov:8081/formats/fdd/fdd000354.shtml)了一下，这是一个标准空ZIP文件开始处的签名：
 

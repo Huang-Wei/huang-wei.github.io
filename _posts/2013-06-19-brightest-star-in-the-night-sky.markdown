@@ -27,6 +27,6 @@ tags:
 
 最后，很符合最近心境的一首歌——「夜空中最亮的星」by 逃跑计划。
 
-![世界](http://www.lifebackup.cn/wp-content/uploads/2013/06/bc5edc37e6e1.jpg)
+![世界](/images/201306/bc5edc37e6e1.jpg)
 
 <script type="text/javascript" src="http://www.xiami.com/widget/player-single?uid=1695&sid=1770201852&mode=js"></script>

@@ -26,7 +26,7 @@ sudo aptitude build-dep openjdk-7
 
 我编译时用的是[官方](http://openjdk.java.net/)打包好的源码包，这里要注意的是：**选择最新的源码包以避免不必要的麻烦**（即主页上**带7u的链接**，而不是7）。
 
-![image](http://www.lifebackup.cn/wp-content/uploads/2013/01/image.png)
+![image](/images/201301/image.png)
 
 ## 3. 设置当前shell的环境变量(optional)
 
@@ -89,4 +89,4 @@ make[1]: Leaving directory '/home/hweicdl/dev/openjdk'
 
 成功后在build目录下，有一个编译好的jdk出现。执行一下`java –version`看效果吧~!
 
-![image](http://www.lifebackup.cn/wp-content/uploads/2013/01/image1.png)
+![image](/images/201301/image1.png)

@@ -52,9 +52,9 @@ org.springframework.bundle.spring.core_2.5.5 [1512] imports
 
 看出蹊跷来了吧：这两个spring bundle在两次运行期import的是不同bundle提供的org.apache.commons.collections。这好像没什么大不了是吗？那么假设test.bundle同时require org.springframework.bundle.spring.core_2.5.5和shared.provider，会发生什么事情呢？
 
-![image](http://www.lifebackup.cn/wp-content/uploads/2013/03/image.png)
+![image](/images/201303/image.png)
 
-![image](http://www.lifebackup.cn/wp-content/uploads/2013/03/image1.png)
+![image](/images/201303/image1.png)
 
 是的，case #1中的test.bundle不会被正确加载，它的状态仅仅是installed，诊断信息显示为：
 

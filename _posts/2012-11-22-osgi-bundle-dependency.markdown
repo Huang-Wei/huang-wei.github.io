@@ -42,7 +42,7 @@ tags:
   
 * Bundle级别的版本依赖        
 假设有两个Bundle，其Bundle-SymbolicName均为A（Bundle-Name分别为A1和A2），其Bundle-Version为1.0.0和2.0.0。
-![image](http://www.lifebackup.cn/wp-content/uploads/2012/11/image.png)
+![image](/images/201211/image.png)
 此时B bundle依赖A bundle（不指定依赖的具体版本），那么在运行时B所依赖的package均来自A2。因为OSGi默认取依赖的最高版本，此例中为2.0.0。         
 按照这个原则，指定具体的依赖为[1.0.0, +∝)或[1.0.0, 2.0.0]时均会取A2的package(2.0.0)。         
 只有在依赖为类似[1.0.0, 2.0.0)时，B bundle才会去找A1的package(1.0.0)。 
@@ -50,9 +50,9 @@ tags:
 * Package级别的版本依赖        
 在上例的基础上，假设A1 Export的package为_x.y.z.common(1.0.0)_和_x.y.z.core(1.0.0)_，A2 Export的package为_x.y.z.common(2.0.0)_和_x.y.z.core(2.0.0)_。         
 此时B bundle不依赖任何bundle，只在Import-Package中指定_x.y.z.common_与_x.y.z.core_：
-![image](http://www.lifebackup.cn/wp-content/uploads/2012/11/image1.png)
+![image](/images/201211/image1.png)
 依赖的规则也遵循数学上的开闭区间规则，即依赖的是common和core的2.0.0版本。但Import-Package是package级别的依赖，并不需要绑定于某个Bundle实现，这样就更灵活。如：
-![image](http://www.lifebackup.cn/wp-content/uploads/2012/11/image2.png)
+![image](/images/201211/image2.png)
 就采用了_x.y.z.common_的1.0.0版本（属于A1 bundle），以及_x.y.z.core_的2.0.0版本（属于A2 bundle）。
    
 * Bundle依赖与Package依赖冲突        
@@ -61,7 +61,7 @@ tags:
 Import-Package: x.y.z.common [1.0.0, 2.0.0), x.y.z.core [1.0.0, 2.0.0)
 ```  
 。这种冲突情况下，仍然会采用common和core的1.0.0版本。即以Import-Package为准，即使Require-Bundle Export了更高版本的package。OSGi规范的3.9.4节有详细阐述。
-![image](http://www.lifebackup.cn/wp-content/uploads/2012/11/image3.png)
+![image](/images/201211/image3.png)
 
 * 多个Bundle或Package版本相同  
 老实说这个命题是比较eggache的，囧。。。因为没人傻到犯这种错误。但据我测试来看，如果多个Bundle版本相同，那么OSGi只会load某一份Bundle。而版本相同的package被别的Bundle Import时，import的package也是不确定的。
@@ -76,7 +76,7 @@ PS：把`Preferences > Plug-in Development > Update stale manifest files priors 
 Bundle A1 export的package为x.y.z.core(1.0.0)；Bundle A2 export的package为x.y.z.core(2.0.0)。
 
 Bundle B Import-Package:x.y.z.core;version="[1.0.0,2.0.0)"，且Export-Package: u.v.w.common。在u.v.w.common中的Demo.java代码是这样的：
-![image](http://www.lifebackup.cn/wp-content/uploads/2012/11/image4.png)
+![image](/images/201211/image4.png)
 
 因为B明确指定了依赖package x.y.z(1.0.0)，所以很显然这里的getCore()使用的x.y.z(1.0.0)中的Core.java，而不是x.y.z(2.0.0)中的。
 
@@ -84,7 +84,7 @@ So far so good.
 
 我们再加入Bundle C，Import-Package: u.v.w.common, x.y.z.core。目前的依赖关系是这样的：
 
-![image](http://www.lifebackup.cn/wp-content/uploads/2012/11/image5.png)
+![image](/images/201211/image5.png)
 
 在C的`Activator#start(BundleContext context)`中如果像这样返回了Core，会发生什么情况呢？
 
@@ -120,7 +120,7 @@ Export-Package: u.v.w.common;uses:="x.y.z.core"
 
 看完上面的例子，细心的读者可能发现一个比较tricky的问题：C Bundle所import的package x.y.z.core到底是1.0.0还是2.0.0呢？按理说不加版本默认是按照[0.0.0, +∝)匹配最高的版本，但是加了uses关键字后其实绑定的是1.0.0版本。如下图所示：
 
-![image](http://www.lifebackup.cn/wp-content/uploads/2012/11/image6.png)
+![image](/images/201211/image6.png)
 
 不信的话，将上面的例子中C Bundle的MANIFEST.MF修改一下：
 
@@ -136,7 +136,7 @@ The bundle "C_1.0.0 [67]" could not be resolved. Reason: Package uses conflict: 
 
 而C bundle的状态也仅仅是`INSTALLED`：
 
-![image](http://www.lifebackup.cn/wp-content/uploads/2012/11/image7.png)
+![image](/images/201211/image7.png)
 
 也就是说：当C间接使用了1.0.0的common包（B Bundle在Export common包时使用了uses关键字）时，同时引入2.0.0的common包是不允许的，这会造成C Bundle不能被正确加载。
 

@@ -36,7 +36,7 @@ PS: 现在的Github不再仅仅支持open-ssh，对于windows用户且使用Http
 
 安装完EGit之后，进入Preferences > Team > Git，指定默认的repository地址，如C:\Users\superpippo。Preferences > Team > Git > Configuration，这里面的键值对都记录在C:Users\superpippo.gitconfig中。
 
-![](http://www.lifebackup.cn/wp-content/uploads/2012/07/image.png)
+![](/images/201207/image.png)
 
 其他均默认。
 
@@ -46,7 +46,7 @@ PS: 现在的Github不再仅仅支持open-ssh，对于windows用户且使用Http
 
 创建一个简单的Java Project并命名为Git-Test，右键Git-Test ，Team > Share Project... > Git
 
-![](http://www.lifebackup.cn/wp-content/uploads/2012/07/image1.png)
+![](/images/201207/image1.png)
 
 右键Git-Test，Commit...，选中所有文件提交。至此所有的文件都已纳入本地Git的版本控制中。
 
@@ -54,19 +54,19 @@ PS: 现在的Github不再仅仅支持open-ssh，对于windows用户且使用Http
 
 右键Git-Test，Team > Remote > Push...。贴入之前在GitHub创建的repository的HTTPS地址:
 
-![](http://www.lifebackup.cn/wp-content/uploads/2012/07/image2.png)
+![](/images/201207/image2.png)
 
 Next，选择Add All Branches Spec。
 
-![](http://www.lifebackup.cn/wp-content/uploads/2012/07/image3.png)
+![](/images/201207/image3.png)
 
 Next。
 
-![](http://www.lifebackup.cn/wp-content/uploads/2012/07/image4.png)
+![](/images/201207/image4.png)
 
 Finish。成功的话会有提示。
 
-![](http://www.lifebackup.cn/wp-content/uploads/2012/07/image5.png)
+![](/images/201207/image5.png)
 
 ## <a name='step7'></a>Step 7：从GitHub上Check out代码
 
@@ -74,7 +74,7 @@ Finish。成功的话会有提示。
 
 File > Import... > Git > Projects from Git > URI。
 
-![](http://www.lifebackup.cn/wp-content/uploads/2012/07/image6.png)
+![](/images/201207/image6.png)
 
 一路Next即可。
 
@@ -86,4 +86,4 @@ File > Import... > Git > Projects from Git > URI。
 
 如果这两个按钮失效，以下是我的Repository Settings作为参考：
 
-![](http://www.lifebackup.cn/wp-content/uploads/2012/07/image7.png)
+![](/images/201207/image7.png)

@@ -27,13 +27,13 @@ EMF中的元模型是一个.ecore文件，你可以通过Eclipse自带的EMF模�
 
 这样一个空的ecore就建好了：
 
-![image](http://www.lifebackup.cn/wp-content/uploads/2011/09/image-thumb.png)
+![image](/images/201302/image-thumb.png)
 
 在继续构建ecore前，先介绍几个重要的概念：
 
 * EPackage: 跟java的package类似，用以组织语义上相似的元素。EPackage可以有0个或多个esubPackage，但root package只有一个，并与EFactory互相关联。每个EPackage由其URI属性唯一标识，并在持久化时表示成XML根结点的namespace（nsURI）。  
 在EMF内部维护了一个ePackage的hashMap可以通过nsURI得到相对应的ePackage：EPackage.Registry.INSTANCE.getEPackage(pkgUri)  
-![image](http://www.lifebackup.cn/wp-content/uploads/2013/02/image.png) ![image](http://www.lifebackup.cn/wp-content/uploads/2013/02/image1.png)   
+![image](/images/201302/image.png) ![image](/images/201302/image1.png)   
 * EFactory: 单例，包含了创建此模型中各对象的create方法。   
 * EClass: 相当于java的Class，由各eStructuralFeature组合而成。   
 * EReference: EStructuralFeature的一种，一般为指向其他EClass（可以认为是复杂对象）。   
@@ -44,13 +44,13 @@ EMF中的元模型是一个.ecore文件，你可以通过Eclipse自带的EMF模�
   1. EDataType所实例化的对象只会存在于内存中，而其序列化和反序列化则由一组可逆的序列规则控制。也就是说你需要_**手工**_实现从java.net.InetAddress到String的映射逻辑（createXXFromString(), converXXToString()），EMF框架并不知道这些。   
   1. EEnum可以看成特殊的EDataType，EInt, EString等可以看成EMF_**内置**_的EDataType。
 
-![image](http://www.lifebackup.cn/wp-content/uploads/2011/09/image-thumb1.png)
+![image](/images/201302/image-thumb1.png)
 
 了解这些EXXX的概念和设计原则，才能更加游刃有余地使用并定制化基于EMF的各式应用。（PS：这些概念对理解Dynamic EMF非常关键）
 
 在本文中，以书店中对图书的简单建模为例（未使用到EDataType）：
 
-[![image](http://www.lifebackup.cn/wp-content/uploads/2011/09/image-thumb2.png)](http://www.lifebackup.cn/wp-content/uploads/2011/09/image2.png)
+![](/images/201302/image-thumb2.png)
 
 其中EAttribute与EReference均有lowerBound(默认0)和upperBound(默认1)属性，除了0，1外，-1代表unBound，-2代表unspecified。
 
