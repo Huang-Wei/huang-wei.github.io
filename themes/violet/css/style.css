@@ -583,6 +583,11 @@ a.toTop:hover {
     vertical-align: top;
 }
 
+.main-article-contant p + ul + h2,
+.main-article-contant p + ul + h3 {
+   margin: -15px 0px 0px 0px; 
+}
+
 .main-article-contant p + pre,
 .main-article-contant p + ul,
 .main-article ul + pre {

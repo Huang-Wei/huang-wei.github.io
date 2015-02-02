@@ -46,17 +46,17 @@ PS: TimSort不仅内置在各种JDK 7的版本，也存在于Android SDK中（�
 
 - 3.1 更改内部实现：例如对于上个例子，就需要更改为
 
-```java
-public int compare(ComparatorTest o1, ComparatorTest o2) {          
-    return o1.getValue() == o2.getValue() ? 0 : (o1.getValue() > o2.getValue() ? 1 : -1);           
-}
-```
+    ```java
+    public int compare(ComparatorTest o1, ComparatorTest o2) {          
+        return o1.getValue() == o2.getValue() ? 0 : (o1.getValue() > o2.getValue() ? 1 : -1);           
+    }
+    ```
 
 - 3.2 Java 7预留了一个接口以便于用户继续使用Java 6的排序算法：在启动参数中（例如eclipse.ini）添加
 
-```
--Djava.util.Arrays.useLegacyMergeSort=true
-```
+    ```
+    -Djava.util.Arrays.useLegacyMergeSort=true
+    ```
 
 - 3.3 将这个IllegalArgumentException手动捕获住（不推荐）
 
