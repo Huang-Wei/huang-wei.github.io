@@ -1,5 +1,6 @@
-markdown: rdiscount
-pygments: true
+markdown: kramdown
+highlighter: pygments
+gems: [jekyll-paginate]
 paginate: 8
 
 safe: false
@@ -58,9 +59,9 @@ authors:
 
 #评论信息
 disqus:
-  config: false
+  config: true
   id: hweicdl
 
 duoshuo:
-  config: true
+  config: false
   id: hweicdl
