@@ -1,67 +1,191 @@
-markdown: kramdown
-highlighter: rouge
-gems: [jekyll-paginate]
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+#
+# ,--------.      ,--.   ,--. ,--.
+# '--.  .--',---.  \  `.'  /,-'  '-.
+#    |  |  | .-. :  .'    \ '-.  .-'
+#    |  |  \   --. /  .'.  \  |  |
+#    `--'   `----''--'   '--' `--'
+
+
+
+
+## => Site Settings
+##############################
+text_skin: ocean # "default" (default), "dark", "forest", "ocean", "chocolate", "orange"
+highlight_theme: default # "default" (default), "tomorrow", "tomorrow-night", "tomorrow-night-eighties", "tomorrow-night-blue", "tomorrow-night-bright"
+url     : # the base hostname & protocol for your site e.g. https://www.someone.com
+baseurl : # does not include hostname
+title   : Wei's Lifebackup
+description: > # this means to ignore newlines until "Language & timezone"
+  Wei's Lifebackup
+
+
+## => Language and Timezone
+##############################
+lang: # the language of your site, "en" (default, English), "zh"(简体中文), "zh-Hans"(简体中文), "zh-Hant"(繁體中文)
+timezone: America/Los_Angeles # see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones for the available values
+
+
+## => Author and Social
+##############################
+author:
+  type      : # "person" (default), "organization"
+  name      : Wei Huang
+  url       :
+  avatar    : # path or url of avatar image
+  bio       : Know yourself.
+  email     :
+  facebook  : # "user_name" the last part of your profile url, e.g. https://www.facebook.com/user_name
+  twitter   : # "user_name" the last part of your profile url, e.g. https://twitter.com/user_name
+  github    : # "user_name" the last part of your profile url, e.g. https://github.com/user_name
+  linkedin  : # "user_name" the last part of your profile url, e.g. https://www.linkedin.com/in/user_name/
+  googleplus: # "user_id"   the last part of your profile url, e.g. https://plus.google.com/u/0/user_id
+  weibo     : # "user_id"   the last part of your profile url, e.g. https://www.weibo.com/user_id/profile?...
+  douban    : # "user_name" the last part of your profile url, e.g. https://www.douban.com/people/user_name/
+
+
+## => GitHub Repository (if the site is hosted by GitHub)
+##############################
+repository: user_name/repo_name
+repository_tree: master
+
+
+## => Paths
+##############################
+paths:
+  root    : # title link url, "/" (default)
+  home    : # home layout url, "/" (default)
+  archive : # "/archive.html" (default)
+  rss     : # "/feed.xml" (default)
+
+
+## => Post
+##############################
+## excerpt
+excerpt_separator: <!--more-->
+excerpt_type: html # text (default), html
+
+## license
+license: none # "CC-BY-4.0", "CC-BY-SA-4.0", "CC-BY-NC-4.0", "CC-BY-ND-4.0"
+
+## TOC
+toc:
+  selectors: # "h1,h2,h3,h4" (default)
+
+
+## => Markdown Enhancements
+##############################
+## Mathjax
+mathjax: # false (default), true
+mathjax_autoNumber: # false (default), true
+
+## Mermaid
+mermaid: # false (default), true
+
+## Chart
+chart: # false (default), true
+
+
+## => Paginate
+##############################
 paginate: 8
+paginate_path: /page:num # don't change this unless for special need
 
-safe: false
 
-#站点基础配置
-title: Superpippo's Lifebackup
-#subTitle: backup my life
-description: 这是 superpippo 的又一个博客，它是基于 Jekyll 搭建起来的。
-#url: http://huang-wei.github.io
-feed: /atom.xml
+## => Sources
+##############################
+sources: # bootcdn (default), unpkg
 
-#菜单配置
-nav:
-  - text: 首页
-    url: /index.html
-  - text: 文章归档
-    url: /archives.html
-  - text: 01呓语
-    url: /programming.html
-  - text: 山与远方
-    url: /life.html
-  - text: 阅读人生
-    url: /reading.html
-  - text: 白加黑
-    url: /football.html
 
-#theme config
-themes: /themes/violet
+## => Comments
+##############################
+comments:
+  provider: disqus # false (default), "disqus", "gitalk", "custom"
 
-#配置你喜欢的顶部背景图片
-headimg:
-  - item: /themes/violet/images/hdbg01.jpg
-  - item: /themes/violet/images/hdbg02.jpg
-  - item: /themes/violet/images/hdbg03.jpg
-  - item: /themes/violet/images/hdbg04.jpg
+  ## Disqus
+  disqus:
+    shortname: hweicdl # the Disqus shortname for the site
 
-#关注我
-follow:
-  - class: fa-github
-    url: http://github.com/huang-wei
-  - class: fa-weibo
-    url: http://weibo.com/hweicdl
-  - class: fa-inbox
-    url: mailto:superpippohw@gmail.com
-  - class: fa-rss
-    url: /atom.xml
+  ## Gitalk
+  # please refer to https://github.com/gitalk/gitalk for more info.
+  gitalk:
+    clientID    : # GitHub Application Client ID
+    clientSecret: # GitHub Application Client Secret
+    repository  : # GitHub repo
+    owner       : # GitHub repo owner
+    admin: # GitHub repo owner and collaborators, only these guys can initialize GitHub issues, IT IS A LIST.
+      # - your GitHub Id
 
-#作者信息
-authors:
-  superpippo:
-    display: Superpippo
-    img: http://tp4.sinaimg.cn/2120241507/180/40025374134/1
-  lisa:
-    display: Lisa
-    img: http://tp4.sinaimg.cn/1864686623/180/5681284451/0
 
-#评论信息
-disqus:
-  config: true
-  id: hweicdl
+## => Pageview
+##############################
+pageview:
+  provider: false # false (default), "leancloud", "custom"
 
-duoshuo:
-  config: false
-  id: hweicdl
+  ## Leancloud
+  leancloud:
+    app_id    : # LeanCloud App id
+    app_key   : # LeanCloud App key
+    app_class : # LeanCloud App class
+
+
+## => Analytics
+##############################
+analytics:
+  provider: false # false (default), "google", "custom"
+
+  ## Google Analytics
+  google:
+    tracking_id : # Google Analytics id for the site
+    anonymize_ip: false # Anonymize IP tracking for Analytics
+
+
+## => Build
+##############################
+markdown    : kramdown
+highlighter : rouge
+permalink   : date
+
+exclude:
+  - CHANGELOG.md
+  - CHECKLIST.md
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README-*.md
+  - README.md
+  - gulpfile.js
+  - jekyll-text-theme.gemspec
+  - package-lock.json
+  - package.json
+  - /docs
+  - /node_modules
+  - /screenshots
+  - /test
+  - /vendor
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: article
+      license: false
+      aside:
+        toc: true
+      show_edit_on_github: false
+      pageview: false
+
+
+## => Plugins
+##############################
+plugins:
+  - jekyll-feed
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jemoji
