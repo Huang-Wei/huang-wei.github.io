@@ -1,16 +1,7 @@
 ---
-author: superpippo
-comments: true
-date: 2012-12-03 14:24:35+00:00
-layout: post
-slug: java-7-zipoutputstream
 title: Java 7 ZipOutputStream
-wordpress_id: 256
-categories:
-- programming
-tags:
-- java
-- java7
+tags: java java7
+lang: zh
 ---
 
 在Java 6的`java.util.zip.ZipOutputStream#finish()`实现中，若`ZipEntry`为空，会抛出异常：
@@ -20,6 +11,8 @@ if (xentries.size() < 1) {
 	throw new ZipException("ZIP file must have at least one entry");           
 }
 ```
+
+<!--more-->
 
 也就是说，当你创建一个ZipOutputStream但不设置任何ZipEntry，然后持久化到文件的时候，在Java 6中会报错。
 

@@ -1,16 +1,7 @@
 ---
-author: superpippo
-comments: true
-date: 2012-10-23 12:53:56+00:00
-layout: post
-slug: do-not-forget-hashset
 title: 别忘了HashSet
-wordpress_id: 233
-categories:
-- programming
-tags:
-- hashset
-- java
+tags: hashset java
+lang: zh
 ---
 
 由于长期间的思维惯性和对Java程序缺乏足够的性能重视，导致我在处理Java集合类时经常想当然的只使用List。
@@ -32,6 +23,8 @@ for (Object o : collection m) {
 	...   
 }
 ```
+
+<!--more-->
 
 乍一看也没太大问题，但是当N很大时，这样的写法就有性能上的隐患——因为List的contains()实现是遍历式的匹配，也就是说上述的代码的时间复杂度是O(M*N)。
 

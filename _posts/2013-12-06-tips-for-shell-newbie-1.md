@@ -1,9 +1,7 @@
 ---
-layout: post
 title: Tips for shell newbie (1)
-description: 记录在写shell脚本时遇到的坑与技巧。
-keyword: linux, bash, shell
-categories: programming
+tags: linux bash shell
+lang: zh
 ---
 
 ## Tip 1. 注意shell执行的具体类型 
@@ -13,6 +11,8 @@ Shell脚本的第一行（Shebang line, e.g. `#!/bin/bash`）指定了其执行�
 PS1：`/etc/shells`中记录着系统可用的shell类型。所以当你发现同样的脚本在不同系统表现不同的时候，有可能是dash和bash（或是其他shell）之间的区别。
 
 PS2：sh是一种POSIX规范，而众多的shell类型是它的实现。linux系统中的sh一般是个symlink，例如ubnutu中默认的sh就会指向/bin/dash。
+
+<!--more-->
 
 ## Tip 2. 赋值语句两边的空格
 

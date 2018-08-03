@@ -1,9 +1,7 @@
 ---
-layout: post
 title: 在ubuntu 1204上快速部署openstack
-description: 最近刚刚接触openstack，就琢磨着部署个环境试试。官方文档中推荐的DevStack安装方式很对我胃口。
-keyword: linux, openstack, kvm
-categories: programming
+tags: linux openstack kvm
+lang: zh
 ---
 
 最近刚刚接触openstack，就琢磨着部署个环境试试。官方[文档](http://www.openstack.org/software/start/)中推荐的[DevStack](http://devstack.org/)安装方式很对我胃口，所有的安装配置都是用shell完成的，然后如其所说： 在运行`stack.sh`的时候，可以读一读这个脚本都做了些什么。
@@ -16,6 +14,8 @@ devstack中有个`tools`目录，里面有个`upload_image.sh`可以用来方便
 tools/upload_image.sh http://download.cirros-cloud.net/0.3.1/cirros-0.3.1-i386-uec.tar.gz
 ```
 ![](/images/201401/openstack-images.png)
+
+<!--more-->
 
 1. 在H release中，`quantum`已经被[改名](https://wiki.openstack.org/wiki/ReleaseNotes/Havana#Key_New_Features_5)为`neutron`，所以这篇文章的命令也得做相应的替换
 

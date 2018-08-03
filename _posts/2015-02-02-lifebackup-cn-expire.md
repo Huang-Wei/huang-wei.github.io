@@ -1,9 +1,7 @@
 ---
-layout: post
 title: lifebackup.cn域名过期
-keyword: ssh, bash, loop
-categories: programming
-description: lifebackup.cn域名过期了>_<
+tags: ssh bash loop
+lang: zh
 ---
 
 ## 1) lifebackup-cn
@@ -11,6 +9,8 @@ description: lifebackup.cn域名过期了>_<
 `lifebackup.cn`是我在研一的时候申请的，虽然跟着我有7年的历史了，但始终纠结着这不是个顶级域名，so上个月到期后就没有再续费了>_<
 
 在跟着`huang-wei.github.io`这个二级域名厮混前，还需要解决图片URL的迁移工作——之前的图片都存在cowoo的主机上，想着直接`sed/www.lifebackup.cn/<ip>/`就OK了，但ip `173.192.191.35`直接指向的是cowoo的主站`productivelife.cn`。就不麻烦cowoo去更新域名，配apache的virtual host了，况且访问速度也一般，于是准备把所有图片直接放到github上。
+
+<!--more-->
 
 ## 2) 备份wordpress
 

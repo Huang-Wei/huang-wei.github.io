@@ -1,21 +1,16 @@
 ---
-author: superpippo
-comments: true
-date: 2012-08-14 12:50:16+00:00
-layout: post
-slug: db2-not-listening-tcpip-port
 title: DB2安装后未监听本地端口
-wordpress_id: 220
-categories: programming
-tags:
-- db2
+tags: db2 tcpip
+lang: zh
 ---
 
 前两天在suse 64位机器上安装DB2 10.1时发生一个奇怪的现象：安装成功，但只能服务器端操作，客户端JDBC连接，或是catalog后db2cmd的连接皆无果。
 
 例如：在安装过程中会添加一个db2instX的帐户，及一个db2 instance，监听在5000X端口。但客户端catalog完这个node再connect总显示TCP/IP communication错误。在检查完防火墙，并`telnet XX.XX.XX.XX 5000X`后确定客户端及网络没有问题。
 
-那么就应该是服务器安装后的一些冲突或bug。
+那么就应该是服务器安装后的一些冲突或bug：
+
+<!--more-->
 
 ## 1. 查看当前实例配置信息中的SVCENAME值
 

@@ -1,21 +1,14 @@
 ---
-author: superpippo
-comments: true
-date: 2013-01-01 14:59:59+00:00
-layout: post
-slug: why-epl
 title: 为什么英超是世界第一联赛
-wordpress_id: 425
-categories:
-- football
-tags:
-- epl
-- football
+tags: epl football essay
+lang: zh
 ---
 
 自从西甲变成西超二人转，意甲变成屌丝互搏，德甲一直不甚感冒后，我就基本只看英超了。（上一篇关于英超的[blog](http://www.lifebackup.cn/match-of-the-day-return.html)中很多预测还是挺正确的嘛，哈哈。）今天以一个纯球迷的角度，胡乱侃几句，为什么英超现在是世界第一联赛。
 
 ![](/images/201301/barclaysepl.jpg)
+
+<!--more-->
 
 ## 钱
 

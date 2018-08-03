@@ -1,15 +1,7 @@
 ---
-author: superpippo
-comments: true
-date: 2010-07-14 14:29:40+00:00
-layout: post
-slug: summary-work-for-one-year
 title: 工作一周年记
-wordpress_id: 161
-categories:
-- life
-tags:
-- 工作
+tags: working
+lang: zh
 ---
 
 总的来说，IBM在我学生生涯占据了一个很重要的位置，从大二加入学校的IBM俱乐部，其间参加过IBM的全国大学生创新大赛，去过九寨参加IBM夏令营，一直到研二来到CDL实习。2009年7月14号，我从一个实习生转成了正式员工，bluepathway还在沿续。
@@ -18,9 +10,9 @@ tags:
 
 对一年的表现来说，我自己觉得也跟大多数新人的PBC一样吧，solid contribution，但并未有太多让人吃惊，为之眼前一亮的东西。生活中的一些事情也占据了这一年的一些时间吧，比如房子等等。接下来的一年，希望生活上能逐步稳定下来，这样才能对长久的工作和生活都是非常重要的。
 
- 
-
 接下来说一些一年内自己觉得比较有意思的东西吧：
+
+<!--more-->
 
 ## The code is there, read it 
  

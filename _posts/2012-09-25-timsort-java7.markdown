@@ -1,16 +1,7 @@
 ---
-author: superpippo
-comments: true
-date: 2012-09-25 13:57:48+00:00
-layout: post
-slug: timsort-java7
 title: TimSort in Java 7
-wordpress_id: 228
-categories: programming
-tags:
-- java
-- java7
-- timsort
+tags: java java7 timsort
+lang: zh
 ---
 
 ## 1. 为什么写这篇文章
@@ -20,6 +11,8 @@ tags:
 > Exception in thread "main" java.lang.IllegalArgumentException: Comparison method violates its general contract!
 
 Google了这个错误，是由于Java 7内置的新排序算法导致的。这才猛然想起产品的编译环境最近升级到了Java 7。
+
+<!--more-->
 
 ## 2. 结论
 

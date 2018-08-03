@@ -1,9 +1,7 @@
 ---
-layout: post
 title: Sublime中的new line设置
-keyword: editor, newline, sublime
-categories: programming
-description: 告诉我这不是真的...
+tags: editor newline sublime
+lang: zh
 ---
 
 先来用sublime打开一个文件：foo.txt，随便输入几行：
@@ -13,6 +11,8 @@ aaa
 bbb
 ccc
 ```
+
+<!--more-->
 
 保存，它看起来是这样的：
 

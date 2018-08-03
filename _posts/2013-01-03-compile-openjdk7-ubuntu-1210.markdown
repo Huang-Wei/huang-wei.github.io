@@ -1,16 +1,7 @@
 ---
-author: superpippo
-comments: true
-date: 2013-01-03 14:57:34+00:00
-layout: post
-slug: compile-openjdk7-ubuntu-1210
 title: Ubuntu12.10下编译openjdk 7
-wordpress_id: 432
-categories: programming
-tags:
-- java
-- JDK编译
-- ubuntu
+tags: java JDK compliing ubuntu
+lang: zh
 ---
 
 最近在读《[深入理解Java虚拟机](http://book.douban.com/subject/6522893/)》这本书，于是谨遵书中教诲，尝试着自己动手编译一个jdk。这篇文章就把在Ubuntu12.10下编译openjdk 7的*最简*步骤记录下来，以备不时之需。
@@ -20,13 +11,14 @@ tags:
 ```
 sudo aptitude build-dep openjdk-7
 ```
- 
 
 ## 2. 下载openjdk7源码
 
 我编译时用的是[官方](http://openjdk.java.net/)打包好的源码包，这里要注意的是：**选择最新的源码包以避免不必要的麻烦**（即主页上**带7u的链接**，而不是7）。
 
 ![image](/images/201301/image.png)
+
+<!--more-->
 
 ## 3. 设置当前shell的环境变量(optional)
 

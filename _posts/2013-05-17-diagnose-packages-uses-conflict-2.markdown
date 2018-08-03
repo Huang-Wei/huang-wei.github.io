@@ -1,15 +1,7 @@
 ---
-author: superpippo
-comments: true
-date: 2013-05-17 13:18:28+00:00
-layout: post
-slug: diagnose-packages-uses-conflict-2
 title: 如何诊断OSGi环境下的packages uses conflict（二）
-wordpress_id: 504
-categories: programming
-tags:
-- java
-- osgi
+tags: java osgi
+lang: zh
 ---
 
 [上一篇](/programming/2013/03/30/diagnose-packages-uses-conflict-1.html)文章说到packages uses conflict出现的原因，这篇文章来说一下怎么快速定位到不能加载的bundle，并找到解决方案。
@@ -28,6 +20,8 @@ tags:
 !SUBENTRY 2 bunle_x 2 0 2013-03-30 20:26:32.242  
 !MESSAGE Missing imported package package_z.
 ```
+
+<!--more-->
 
 ## 定位问题
 

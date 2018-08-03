@@ -1,14 +1,12 @@
 ---
-layout: post
 title: Tips for shell newbie (2)
-description: 记录在写shell脚本时遇到的坑与技巧。
-keyword: linux, bash, shell
-categories: programming
+tags: linux bash shell
+lang: zh
 ---
 
 ## <a name="tip11"></a>Tip 11. 函数的返回值
 
-* 和大多数语言一样，返回值用`return`（如果不指定则返回最后一条语句的返回值）。但和大多数语言不一样，shell中返回值**只能为整数**。
+- 和大多数语言一样，返回值用`return`（如果不指定则返回最后一条语句的返回值）。但和大多数语言不一样，shell中返回值**只能为整数**。
   
   ```bash
   fun1() {
@@ -30,7 +28,10 @@ categories: programming
   echo $? # 输出100
   ```
 
+<!--more-->
+
 ## Tip 12. 命令的返回值
+
 一般的linux命令，都可以在shell中直接使用，我们也经常利用这些命令（包括[Tip 11](#tip11)中的自定义函数）的标准输出（管道1）来当作"hacked"返回值。
 
 ```bash

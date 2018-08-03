@@ -1,15 +1,7 @@
 ---
-author: superpippo
-comments: true
-date: 2012-07-18 17:19:37+00:00
-layout: post
-slug: config_github_via_egit
 title: EGit下配置Github项目
-wordpress_id: 202
-categories: programming
-tags:
-- egit
-- github
+tags: git egit github
+lang: zh
 ---
 
 现在这年头，Github上没有几个项目都不敢跟人打招呼了，越来越多的招聘公司把Github上的独立项目作为一项考核指标。So，如果少年你也是跟我一样：1）工作中使用Eclipse ；2）时不时有新奇的想法/代码与大家分享；3）还没有Github项目。那么，开始创建你的第一个Github项目吧。
@@ -17,6 +9,8 @@ tags:
 ## Step 1：安装Git
  
 安装地址在[这儿](http://git-scm.com/)，安装完之后在环境变量中设置HOME为Git的bin目录（例如`D:\Program Files (x86)\Git\bin`），然后可以启动Git的shell看看，其中包含一些通用的环境设置，在windows上有点类似于cygwin。
+
+<!--more-->
 
 ## Step 2：在Eclipse上安装EGit
 

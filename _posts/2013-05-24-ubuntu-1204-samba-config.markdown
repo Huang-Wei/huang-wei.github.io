@@ -1,15 +1,7 @@
 ---
-author: superpippo
-comments: true
-date: 2013-05-24 05:09:49+00:00
-layout: post
-slug: ubuntu-1204-samba-config
 title: Ubuntu 12.04 Samba配置小记
-wordpress_id: 510
-categories: programming
-tags:
-- linux
-- samba
+tags: linux samba
+lang: zh
 ---
 
 本来这种文章网上一搜一大把，也没什么记的必要，但是亲身实践过后，发现有些细节还是记录下来的好，估计半年之后也就全忘了。
@@ -21,6 +13,8 @@ tags:
 对于ubuntu来说，`useradd`不会在本地建立`/home/${user}`文件夹，也不会赋本机登录密码（除非你之后显式地`passwd ${user}`），也就是说useradd完的用户是**不能从本机登录**的。  
 而adduser会一次性地赋本机密码，创建完的用户是正常的本地用户。  
 对于samba共享的用户来说，`useradd`就足够了。
+
+<!--more-->
 
 ## 2) 关于NT_STATUS_LOGON_FAILURE
 

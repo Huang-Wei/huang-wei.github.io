@@ -1,12 +1,12 @@
 ---
-layout: post
 title: 在本地kvm运行CloudInit
-description: CloudInit是最先由Amazon贡献，用于EC2的instance初始化，继而被各linux厂商（ubuntu，redhat）所采纳，用在各种linux的cloud image上。这篇文章基于Ubuntu 12.04，谈谈如何使用CloudInit以NoCould的方式初始化linux image，以及这种方式对我们可能有的启发。
-keyword: linux, cloudinit, kvm
-categories: programming
+tags: linux cloudinit kvm
+lang: zh
 ---
 
 CloudInit是最先由Amazon贡献，用于EC2的instance初始化，继而被各linux厂商（[ubuntu](https://help.ubuntu.com/community/CloudInit)，[redhat](https://rhn.redhat.com/errata/RHEA-2013-0535.html)）所采纳，用在各种linux的cloud image上。这篇文章基于Ubuntu 12.04，谈谈如何使用CloudInit以NoCould的方式初始化linux image，以及这种方式对我们可能有的启发。
+
+<!--more-->
 
 ## 安装KVM
 

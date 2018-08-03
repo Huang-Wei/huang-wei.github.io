@@ -1,14 +1,7 @@
 ---
-author: superpippo
-comments: true
-date: 2012-11-22 09:22:38+00:00
-layout: post
-slug: osgi-bundle-dependency
 title: Let's Talk About OSGi Bundle Dependency
-wordpress_id: 246
-categories: programming
-tags:
-- osgi
+tags: osgi
+lang: zh
 ---
 
 ## 1. OSGi Terms
@@ -26,6 +19,8 @@ tags:
 而在Eclipse完全基于OSGi后，二者的差别就比较小了。
   * MANIFEST.MF是作为最核心的组件描述符存在的：Bundle Version, Name, Dependency等等都在其中定义
   * plugin.xml是作为MANIFEST.MF的一个补充。除了OSGi的标准Service模型，Equinox还有一套自己的机制：Equinox Extension Registry。也就是我们常用的Eclipse扩展点机制，在功能上它是对OSGi的一个很好补充。 
+
+<!--more-->
 
 ## 2. Bundle Dependencies
 

@@ -1,8 +1,7 @@
 ---
-layout: post
 title: 从一个bash "bug"说起
-keyword: ssh, bash, loop
-categories: programming
+tags: ssh bash loop
+lang: zh
 ---
 
 ## 两个例子
@@ -24,6 +23,8 @@ while read vm; do
   ssh root@${vm} "sleep 2"
 done < vms
 ```
+
+<!--more-->
 
 结果像下面这样：看起来vm2的结果根本就没有执行！！
 

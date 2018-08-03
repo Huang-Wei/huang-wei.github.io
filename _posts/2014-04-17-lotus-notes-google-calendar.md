@@ -1,10 +1,12 @@
 ---
-layout: post
 title: 同步Lotus Notes Calendar至Google Calendar
-description: 记录如何同步Lotus Notes Calendar至Google Calendar
-keyword: notes, calendar, gtd 
-categories: programming
+tags: notes calendar gtd 
+lang: zh
 ---
+
+记录如何同步Lotus Notes Calendar至Google Calendar
+
+<!--more-->
 
 ## 准备工作
 

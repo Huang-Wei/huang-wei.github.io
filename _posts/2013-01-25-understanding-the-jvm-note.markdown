@@ -1,18 +1,7 @@
 ---
-author: superpippo
-comments: true
-date: 2013-01-25 15:03:50+00:00
-layout: post
-slug: understanding-the-jvm-note
-title: 《深入理解Java虚拟机》读书笔记
-wordpress_id: 463
-categories:
-- programming
-- reading
-tags:
-- java
-- jvm
-- 阅读
+categories: programming reading
+tags: java jvm reading
+lang: zh
 ---
 
 这本书是13年看的第一本技术书，算是采用了分析阅读的方法来阅读。尝试着以问自己四个问题的方式（[来源](http://book.douban.com/subject/1013208/)），来做一次读书笔记。
@@ -20,6 +9,8 @@ tags:
 ## 这本书主要写了什么？
 
 围绕着JVM这个技术体系，重点阐述了JVM如何对内存进行分配，垃圾的回收方式（GC），字节码的结构与生成机制，类加载器的工作机制，JVM解释执行与编译执行（JIT）的细节，最后提到了Java内存类型和Java线程的设计原则。需要注意的是：JVM是一种规范，或者说是概念模型，而各虚拟机厂商在实现上会有一些区别，在阅读时必须注意JVM这个词的上下文语境。
+
+<!--more-->
 
 ## 这本书是怎么组织的？
 

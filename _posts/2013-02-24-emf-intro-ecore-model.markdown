@@ -1,15 +1,7 @@
 ---
-author: superpippo
-comments: true
-date: 2013-02-24 04:08:24+00:00
-layout: post
-slug: emf-intro-ecore-model
 title: EMF简介——构建ecore model
-wordpress_id: 175
-categories: programming
-tags:
-- ecore
-- EMF
+tags: ecore EMF
+lang: zh
 ---
 
 元模型作为EMF框架中的模型表示，在产品架构中起着举足轻重的作用，这篇文章将对EMF元模型构建中的一些基本概念及细节作尽可能细致的阐述。
@@ -18,6 +10,8 @@ EMF中的元模型是一个.ecore文件，你可以通过Eclipse自带的EMF模�
 
 > * 其他工具的模型文件，例如Rational Rose的UML模型，RSA中的emx模型   
 > * xsd文件
+
+<!--more-->
 
 本篇文章主要通过Eclipse自带的方式介绍Ecore的构建。
 
