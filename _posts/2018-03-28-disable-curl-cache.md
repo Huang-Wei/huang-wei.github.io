@@ -1,6 +1,7 @@
 ---
 title: How to Disable Curl Cache
 tags: curl cache
+key: 2018-03-28-disable-curl-cache
 ---
 
 When you're testing a webpage or api endpoint, usually in your local dev env, it's a common practice that you use (1) a new incognito brower window, and/or (2) CMD + R to make sure to keep caching content away.
