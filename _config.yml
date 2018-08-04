@@ -109,7 +109,7 @@ comments:
 
   ## Disqus
   disqus:
-    shortname: hweicdl # the Disqus shortname for the site
+    shortname: weis-lifebackup # the Disqus shortname for the site
 
   ## Gitalk
   # please refer to https://github.com/gitalk/gitalk for more info.
